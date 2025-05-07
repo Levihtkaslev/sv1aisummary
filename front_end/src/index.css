@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+
+
+body {
+  background-color: rgb(248, 249, 250);
+  @apply tracking-wide;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+} 
+
+.first{
+  @apply m-6
+}
+
+.doctor{
+  @apply bg-cyan-500 p-3 rounded-md w-44 flex justify-center text-white text-lg shadow-xl hover:bg-cyan-500 hover:shadow-cyan-400 transition-all duration-300 hover:shadow-lg
+}
+
+
+.secndouter{
+  @apply flex justify-between mt-11 mb-14 items-center
+}
+
+.heading1{
+  @apply bg-white text-gray-600  h-40 rounded-md shadow-xl items-start  justify-center gap-2 w-full flex  p-4 flex-col 
+}
+
+.bread{
+  @apply flex items-center gap-2 tracking-wider text-lg
+}
+
+.breadunder{
+  @apply cursor-pointer hover:text-blue-400 transition-all duration-300 text-sm
+}
+
+.searchouter{
+  @apply my-11 flex justify-between w-1/5 items-center p-2 rounded-md  shadow-lg bg-white 
+}
+
+.searchinner{
+  @apply outline-none focus:outline-none text-sm p-1 text-gray-600  tracking-wider w-full
+}
+
+.table1{
+  @apply mt-7  rounded overflow-x-auto overflow-hidden shadow-lg
+}
+
+.table2{
+  @apply border-collapse w-full overflow-hidden min-w-max
+}
+
+.thead{
+  @apply bg-gray-700 text-white h-12 text-sm tracking-wide
+}
+
+.thd{
+  @apply text-center tracking-wide
+}
+
+.tbd{
+  @apply text-center text-sm tracking-wide
+}
+
+.update{
+  @apply text-gray-700 hover:text-green-500 text-2xl transition-all duration-300
+}
+
+.delete{
+  @apply text-orange-700 text-2xl hover:text-red-600 transition-all duration-300
+}
+
+.investigationfirstdiv{
+  @apply transition-all duration-200 border gap-3  p-2 hover:border-gray-400 border-gray-300 w-full rounded flex items-center 
+}
+
+.investigationinput{
+  @apply w-full p-2 border-gray-200 border rounded-md hover:border-blue-300 focus:outline-0 transition-all duration-200
+}
+
+.medicineheading{
+  @apply w-full  p-2 text-center
+}
+
+.investigationtopic{
+  @apply w-40  pl-2 text-gray-700 text-sm
+}
+
+.investigationadding{
+  @apply flex  w-full flex-col  gap-3
+}
+
+.investigationinner{
+  @apply  flex gap-4 mr-2
+}
+
+.addingcom{
+  @apply text-teal-500 text-2xl hover:text-cyan-600 transition-all duration-150 outline-none
+}
+
+.removecom{
+  @apply text-red-400 text-2xl hover:text-red-600 transition-all duration-150 outline-none
+}
+
+.chiefout{
+  @apply transition-all duration-200 border hover:border-blue-400 border-gray-300 rounded w-full flex items-center px-2
+}
+
+.eachtopicmargin{
+  @apply p-7 border rounded-md border-gray-300 flex flex-col gap-4 mt-32 
+}
+
+.encountertopic{
+  @apply transition-all duration-200 border  border-gray-300 rounded w-full flex items-center hover:border-blue-400
+}
+
+.encountinput{
+  @apply w-full p-2 outline-none
+}
+
+.iconsstyle{
+  @apply text-gray-700 text-lg
+}
+
+.iconouter{
+  @apply flex items-center gap-1 pl-2
+}
+
+.dischargeout{
+  @apply flex  items-center transition-all duration-200 border  border-gray-300 rounded hover:border-blue-400
+}
+
+.departments{
+  @apply bg-cyan-500 p-3 rounded-md w-44 flex justify-center text-white text-lg shadow-xl hover:bg-cyan-500 hover:shadow-cyan-400 transition-all duration-300 hover:shadow-lg
+}
+
+.topichead{
+  @apply text-2xl text-white
+}
+
+.patinfotext{
+  @apply pl-2 text-sm text-gray-700 
+}
+
+.digone{
+  @apply fixed inset-0 bg-black/30
+}
+
+.digtwo{
+  @apply fixed inset-0 flex items-center justify-center p-4
+}
+
+.digthree{
+  @apply bg-white p-6 rounded-lg shadow-xl w-1/3
+}
+
+.digtitle{
+  @apply text-center py-10  justify-center flex items-center flex-col gap-6
+}
+
+.digno{
+  @apply rounded-lg bg-red-500  hover:bg-orange-500 transition-all duration-200 text-lg text-white 
+}
+
+.digyes{
+  @apply rounded-lg bg-teal-500  hover:bg-teal-700 transition-all duration-200 text-lg text-white flex 
+}
+
+.diginnerbut{
+  @apply flex items-center justify-center py-4 px-8  gap-2 outline-none ring-0
+}
+
+.digiinput{
+  @apply outline-none focus:outline-none text-sm  text-gray-600  tracking-wider border rounded-md border-gray-300 p-1 px-2 hover:border-blue-400 transition-all duration-200
+}
+
+.dashbox1{
+  @apply w-1/4 p-5 shadow-lg rounded-2xl hover:shadow-cyan-500 transition-all duration-300 bg-white
+}
+.dashbox2{
+  @apply flex flex-col w-full pb-3 pt-10
+}
+
+.dashline{
+  @apply mt-2 h-1 w-full bg-gray-600 rounded-2xl
+}
+
+
+
+.innerpagehead{
+  @apply flex items-center justify-between p-12 shadow-2xl rounded-lg bg-white shadow-gray-300
+}
+
+.innerpagetext{
+  @apply text-gray-700 text-4xl flex items-center gap-2
+}
+
+.savebutton{
+  @apply text-xl rounded-lg bg-orange-600 shadow-lg hover:shadow-cyan-300 transition-all duration-200 py-2 px-4 text-white
+}
+
+.copybutton{
+  @apply text-xl rounded-lg bg-black shadow-lg hover:shadow-gray-300 transition-all duration-200 py-2 px-4 text-white
+}
+
+.summaryy{
+  @apply  mt-10 text-lg border outline-none border-gray-300 rounded p-10 hover:border-blue-400 transition-all duration-200 bg-white min-h-[200px]
+}
+
+.finishbutton{
+  @apply text-xl rounded-lg bg-emerald-500 shadow-lg hover:shadow-emerald-300 transition-all duration-200  py-2 px-4 text-white
+}
+
+.headtitle{
+  @apply text-4xl text-gray-700
+}
+
+.summary table {
+  border: 1px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.summary th, .summary td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.summary th {
+  background-color: #f0f0f0;
+}
+
+.title{
+  @apply py-6 flex items-center gap-3 bg-gray-700 w-full text-white rounded px-3 mb-6
+}

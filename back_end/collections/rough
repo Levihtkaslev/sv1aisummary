@@ -1,0 +1,356 @@
+/* //==================================================================================GYNECOLOGY========================================================================
+        {
+
+            gyndiagnosis : {type : String, }
+        },
+        {
+            gynpastsurgicalhis : {type : String,}
+        },
+        
+        {
+            gynchiefcomplaints : {type : String,}
+        },
+        {
+            gynobstetrichistory : {type : String}
+        },
+        {
+            gynmenstrualhis : {type : String,}
+        },
+        {
+            gynlmp : {type : String,}
+        },
+        {
+            gynedd : {type : String,}
+        },
+        {
+            gynpastmedhis: {type : String,}
+        },
+        {
+            gyndrugallergy : {type : String,}
+        },
+        {
+            gynclinicalexam : {type : String, }
+        },
+        {
+            gyninvestigation : {type : String, }
+        },
+        {
+            gyncourseinhospital : {type : String, }
+        },
+        {
+            gynconditionatdischarge : {type : String, }
+        },
+        {
+            gyndiet : {type : String,}
+        },
+        {
+            gynadvisemedication : {type : String, }
+        },
+        {
+            gynoperativenotes : {type : String, }
+        },
+        {
+            gyntreatmentgiven : {type : String, }
+        },
+        {
+            gynfolowp : {type : String, }
+        },
+        {
+            gynemergencycontact : {type : Number}
+        },
+
+//==================================================================================INTERNAL MEDICINE========================================================================
+        
+        {
+
+            intdiagnosis : {type : String, }
+        },
+        {
+            intpastsurgicalhis : {type : String,}
+        },
+
+        {
+            intchiefcomplaints : {type : String,}
+        },
+        {
+            intpastmedhis: {type : String,}
+        },
+        {
+            intdrugallergy : {type : String,}
+        },
+        {
+            intfamilyhis :{type : String,}
+        },
+        {
+            intlifestylehis : {type : String,}
+        },
+        {
+            intvitalsign : {type : String,}
+        },
+        {
+            intsystemicexam : {type : String,}
+        },
+        {
+            intclinicalexam : {type : String, }
+        },
+        {
+            intinvestigation : {type : String, }
+        },
+        {
+            intlabfinding : {type : String, }
+        },
+        {
+            intimagingfind : {type : String, }
+        },
+        {
+            intprovisionaldia : {type : String, }
+        },
+        {
+            intdifferentialdia : {type : String, }
+        },
+        {
+            intcourseinhos : {type : String, }
+        },
+        {
+            inttreatgiven : {type : String, }
+        },
+        {
+            intmedication : {type : String, }
+        },
+        {
+            intconditionatdischarge : {type : String, }
+        },
+        {
+            intfollowp : {type : String, }
+        },
+
+//==================================================================================INTERNAL MEDICINE========================================================================
+
+        {
+            neoapgarscore : {type : String, }
+        },
+        {
+            neomothermedicalhis : {type : String, }
+        },
+        {
+            neodelivermode : {type : String, }
+        },
+        {
+            neonicuadmission : {type : String, }
+        },
+        {
+            neochiefcomplaints : {type : String, }
+        },
+        {
+            neodiagnosis : {type : String, }
+        },
+        {
+            neopastmedhis : {type : String, }
+        },
+        {
+            neodrugalergy : {type : String, }
+        },
+        {
+            neoclinicalexam : {type : String, }
+        },
+        {
+            neoinvestigation : {type : String, }
+        },
+        {
+            neocourseinhospital : {type : String, }
+        },
+        {
+            neotreatmentgiven : {type : String, }
+        },
+        {
+            neoconditionathospital : {type : String, }
+        },
+        {
+            neodiet : {type : String, }
+        },
+        {
+            neomedication : {type : String, }
+        },
+        {
+            neofollowup : {type : String, }
+        },
+        {
+            neoemergency : {type : String, }
+        },
+
+//==================================================================================INTERNAL MEDICINE========================================================================
+
+        {
+
+            obsdiagnosis : {type : String, }
+        },
+        {
+            obspastsurgicalhis : {type : String,}
+        },
+
+        {
+            obschiefcomplaints : {type : String,}
+        },
+        {
+            obsobstetrichistory : {type : String}
+        },
+        {
+            obsgravida : {type : String}
+        },
+        {
+            obsparity : {type : String}
+        },
+        {
+            obsabortion : {type : String}
+        },
+        {
+            obslivebirth : {type : String}
+        },
+        {
+            obslmp : {type : String,}
+        },
+        {
+            obsedd : {type : String,}
+        },
+        {
+            obsmodeofdelivery : {type : String,}
+        },
+        {
+            obsdeliverydate :{type : String,}
+        },
+        {
+            obsbabygender :{type : String,}
+        },
+        {
+            obsbabyweight: {type : String,}
+        },
+        {
+            obsapgarscore :{type : String,}
+        },
+        {
+            obspastmedhis: {type : String,}
+        },
+        {
+            obsdrugallergy : {type : String,}
+        },
+        {
+            obsclinicalexam : {type : String, }
+        },
+        {
+            obsinvestigation : {type : String, }
+        },
+        {
+            obscourseinhospital : {type : String, }
+        },
+        {
+            obsconditionatdischarge : {type : String, }
+        },
+        {
+            obsdiet : {type : String,}
+        },
+        {
+            obsadvisemedication : {type : String, }
+        },
+        {
+            obsoperativenotes : {type : String, }
+        },
+        {
+            obstreatmentgiven : {type : String, }
+        },
+        {
+            obsfolowp : {type : String, }
+        },
+        {
+            obsemergencycontact : {type : Number}
+        },
+
+//==================================================================================INTERNAL MEDICINE========================================================================
+
+        {
+            peddiagnosis : {type : String}
+        },
+        {
+            pedchiefcomplaints : {type : String}
+        },
+        {
+            pedimmunizationhis : {type : String}
+        },
+        {
+            pedgrowth : {type : String}
+        },
+        {
+            pedpastmedicalhis : {type : String}
+        },
+        {
+            pedpastsurgicalhis : {type : string}
+        },
+        {
+            peddrugallergy : {type : String}
+        },
+        {
+            pedclinicalexam : {type : String}
+        },
+        {
+            pedinvestigation : {type : String}
+        },
+        {
+            pedcourseinhos : {type : String}
+        },
+        {
+            pedtreatmenthis : {type : String}
+        },
+        {
+            pedconditionatdischarge : {type : String}
+        },
+        {
+            peddiet : {type : String}
+        },
+        {
+            pedmedication : {type : String}
+        },
+        {
+            pedfollowup : {type : String}
+        },
+        {
+            pedemercontact : {type : String}
+        },
+
+//==================================================================================Surgery========================================================================
+
+        {
+            surdiagnosis :{type : String}
+        },
+        {
+            sur
+        } */
+
+
+
+
+          /*   uhid, encounter, patientname, patientuhid, patientgender, age, admissiondate, patientweight, dateofdischarge, diagnosis, chiefcomplaints, pastmedhis,
+          pastsurghis, drugallergy, familyhis, lifestylehis, clinicalexam, labfind, imagefind, courseinhos, treatmentgiven, advicemedi, conditionatdis, followup, diet,
+          //==============================================================surgery======================================================================
+          sursurgerydate, sursurgery, suroperativenotes, sursurgerydone, sursurgeryplace, suranastetist, suranestisia, surpostoperative,
+          //==============================================================gynac========================================================================
+          gynobstetrichis, gynmenstrualhis, gynlmp, gynedd, gynbloodgroup,
+          //==============================================================obst========================================================================
+          obstobstetrichis, obstmenstrualhis, obstlmp, obstedd, obstbloodgroup, obsgravida, obsparity, obsabortion, obslivebirth, obsmodeofdelivery, obsdeliverydate, 
+          obsbabygender, obsbabyweight, obsapgar,
+          //==============================================================ivf========================================================================
+          ivfobstetrichis, ivfmenstrualhis, ivflmp, ivfedd, ivfbloodgroup, ivfembryotrans, ivfpregnancytest, ivfpartnername, ivfpartnerage, ivfamhlevel, ivfantrafolicle,
+          ivfpreviousivfattempt, ivftreatmentprotocol, ivfoutcome */
+
+
+         /*  
+          uhid, encounter, patientname, patientuhid, patientgender, age, admissiondate, patientweight, dateofdischarge, diagnosis, chiefcomplaints, pastmedhis,
+          pastsurghis, drugallergy, familyhis, lifestylehis, clinicalexam, labfind, imagefind, courseinhos, treatmentgiven, advicemedi, conditionatdis, followup, diet,
+          //==============================================================surgery======================================================================
+          sursurgerydate, sursurgery, suroperativenotes, sursurgerydone, sursurgeryplace, suranastetist, suranestisia, surpostoperative,
+          //==============================================================gynac========================================================================
+          gynobstetrichis, gynmenstrualhis, gynlmp, gynedd, gynbloodgroup,
+          //==============================================================obst========================================================================
+          obstobstetrichis, obstmenstrualhis, obstlmp, obstedd, obstbloodgroup, obsgravida, obsparity, obsabortion, obslivebirth, obsmodeofdelivery, obsdeliverydate, 
+          obsbabygender, obsbabyweight, obsapgar,
+          //==============================================================ivf========================================================================
+          ivfobstetrichis, ivfmenstrualhis, ivflmp, ivfedd, ivfbloodgroup, ivfembryotrans, ivfpregnancytest, ivfpartnername, ivfpartnerage, ivfamhlevel, ivfantrafolicle,
+          ivfpreviousivfattempt, ivftreatmentprotocol, ivfoutcome */
