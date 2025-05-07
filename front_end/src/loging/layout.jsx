@@ -14,6 +14,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { FaThumbsUp } from "react-icons/fa6";
 import { FaThumbsDown } from "react-icons/fa6";
 import { BsFillTrash3Fill } from "react-icons/bs";
+import logo from "/src/assets/sparkai2.png"
 
 
 const Layout = ({ children }) => {
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
       <div className="w-72 rounded-r-lg shadow-xl  bg-gray-800 text-white p-4 flex flex-col justify-between">
         <div>
         <p className="flex w-full text-2xl justify-start items-center font-bold my-6 mx-2">
-          <img src="src/assets/sparkai2.png"   alt="Logo" className="h-10 w-10"/>PFRC<span className="text-gray-800">_</span><span >Summary</span>
+          <img src={logo}   alt="Logo" className="h-10 w-10"/>PFRC<span className="text-gray-800">_</span><span >Summary</span>
         </p>
         <nav className="flex flex-col space-y-1">
 

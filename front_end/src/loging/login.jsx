@@ -7,6 +7,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { IoMdEyeOff } from "react-icons/io";
 import { toast } from "react-toastify";
+import logo from '/src/assets/log-removebg-preview.png';
 
 
 const Login = () => {
@@ -48,7 +49,7 @@ const Login = () => {
 
     <div className="md:w-1/2 w-full flex items-center justify-center p-6">
       <img
-        src="src/assets/log-removebg-preview.png"
+        src={logo}
         alt="Logo"
         className="object-contain w-full max-h-64 md:max-h-full"
       />
