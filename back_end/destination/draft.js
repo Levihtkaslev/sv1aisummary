@@ -119,7 +119,7 @@ exports.postdraft =  async(req, res) => {
               existinguhid.zzzc = draftt.zzzc;
               existinguhid.zzzd = draftt.zzzd;
               existinguhid.draftstatus = draftt.draftstatus
-              
+              existinguhid.count = existinguhid.count+1
          
          await existinguhid.save();
          return res.json({

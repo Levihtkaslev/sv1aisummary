@@ -12,7 +12,8 @@ const summar = new mongoose.Schema({
             summary : {type : String, required: true},
             status : {type : String, default : "pending"},
             createdtime : {type : Date,},
-            lastmodified : {type : Date,} 
+            lastmodified : {type : Date,},
+            count : {type : Number, default : 0}
         }
     ]
 }

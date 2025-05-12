@@ -604,8 +604,8 @@ const draft = new mongoose.Schema({
             zzzb : {type : Boolean, default : false},
             zzzc : {type : Boolean, default : false},
             zzzd : {type : Boolean, default : false},
-            draftstatus : {default : "No", type : String}
-       
+            draftstatus : {default : "No", type : String},
+            count : {type: Number, default : 0}
 
     
 })

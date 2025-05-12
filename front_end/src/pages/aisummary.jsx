@@ -260,7 +260,8 @@ const Summary = () => {
 
                 {**COURSE IN HOSPITAL:**  
                 (<p><u><b>)  
-                Need patient demographic, medicatons, treatment histories all the relevent details with enlarge paragraph atleast 4 line is needed
+                Need patient demographic, medicatons, treatment histories all the relevent details with enlarge paragraph. give detailed output for detailed input.
+                **My course_in_the_hospitals all inputs should be generate. with the inputs generate sentence as para. all values should be there and generate. **Don't ignore any inputs** even it is large input.
                 Provide elaborated details.Must Need <br> after this content}
 
 
@@ -356,7 +357,8 @@ const Summary = () => {
               `
               
             }
-          ]
+          ],
+         
         };
     
         try {
@@ -369,7 +371,7 @@ const Summary = () => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "Authorization" : "Bearer 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",
+                "Authorization" : "Bearer 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",
               },
               body: JSON.stringify(requestData),
             }

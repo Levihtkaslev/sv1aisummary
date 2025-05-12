@@ -27,6 +27,7 @@ exports.postsummary = async(req, res) => {
                 existingencounter.createdtime = createdtime || existingencounter.createdtime;
                 existingencounter.lastmodified = lastmodified || existingencounter.lastmodified
                 existingencounter.status =  status || existingencounter.status
+                existingencounter.count = existingencounter.count+1
             }else{
                 existinguhid.summarydetail.push({
                     encounter, summary,  doneby, doctor, uhid, createdtime, lastmodified

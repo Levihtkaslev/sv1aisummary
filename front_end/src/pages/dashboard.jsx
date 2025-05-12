@@ -59,6 +59,7 @@ const Dashboard = () => {
         const searchuser = search === "" || res.doctor.toLowerCase().includes(searchlower.toLowerCase()) || res.uhid?.toString().includes(searchlower) || res.encounter?.toString().includes(searchlower);
         return(searchuser)
     }) */
+   
       setEncounters(responses);
 
       console.log("encounter",encounters)
