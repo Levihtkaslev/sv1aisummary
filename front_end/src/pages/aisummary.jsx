@@ -371,11 +371,7 @@ const Summary = () => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-<<<<<<< HEAD
-                "Authorization" : "Bearer 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",
-=======
                 "Authorization" : "Bearer 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",
->>>>>>> 5ad7aef6810b1f994dad7ac9ea7842ce6749fc1a
               },
               body: JSON.stringify(requestData),
             }
