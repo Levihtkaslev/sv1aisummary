@@ -38,11 +38,11 @@ app.use('/sv1/ai-summary', rolo);
 app.use('/sv1/ai-summary', summario);
 app.use('/sv1/ai-summary', kranium);
 
-/* 
+
 app.use(express.static(path.join(__dirname, '../front_end/dist')));
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../front_end/dist/index.html'))
-}) */
+})
 
  
 
