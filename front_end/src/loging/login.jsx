@@ -17,6 +17,12 @@ const Login = () => {
   const [showpass, setshowpass] = useState(false)
   const backendurl = import.meta.env.VITE_BACKEND_BASURL;
 
+  const enter = (e) => {
+    if(e.key === "Enter"){
+      handlelogin()
+    }
+  }
+
   const handlelogin = async () => {
     try {
       console.log("Sending:", { userid, password });
@@ -63,6 +69,7 @@ const Login = () => {
           className="py-2 px-4 border border-gray-300 rounded-lg shadow-inner focus:outline-none  hover:border hover:border-gray-500 transition-all duration-200"
           placeholder="Enter your user ID"
           onChange={e => setuserid(e.target.value)}
+          onKeyDown={enter}
         />
       </div>
 
@@ -74,6 +81,7 @@ const Login = () => {
             placeholder="Password"
             type={showpass ? "text" : "password"}
             onChange={e => setpassword(e.target.value)}
+            onKeyDown={enter}
           />
           <button onClick={() => setshowpass(pre => !pre)}>
             {showpass ? <FaEye className="text-xl text-gray-600 outline-none" /> : <IoMdEyeOff className="text-xl text-gray-600 outline-none" />}
@@ -82,7 +90,8 @@ const Login = () => {
       </div>
 
       {/* Login Button */}
-      <div className="mt-4  bg-black text-white rounded-lg hover:bg-white hover:text-black  shadow-lg  transition-all flex items-center justify-center gap-2 text-lg"><button onClick={handlelogin}
+      <div className="mt-4  bg-black text-white rounded-lg hover:bg-white hover:text-black  shadow-lg  transition-all flex items-center justify-center gap-2 text-lg">
+        <button onClick={handlelogin}
         className="py-2 w-full flex gap-2 items-center justify-center outline-none">
         Login <BsFillSendFill />
       </button></div>

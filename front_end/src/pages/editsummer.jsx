@@ -14,6 +14,8 @@ import { MdEditOff } from "react-icons/md";
 import { RiEdit2Fill } from "react-icons/ri";
 import { toast } from "react-toastify";
 import { MdChangeCircle } from "react-icons/md";
+/* import ProgressBar from "react-scroll-progress-bar"; */
+
 
 import axios from "axios";
 
@@ -149,6 +151,7 @@ const EditSummary = () => {
 
   return (
     <div className="m-6">
+     
       <div className="innerpagehead">
         <p className="innerpagetext">Edit Summary <MdEditDocument /></p>
         <div className="flex gap-12 px-7">

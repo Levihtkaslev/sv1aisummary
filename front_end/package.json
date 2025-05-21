@@ -30,6 +30,8 @@
     "react-loading-indicators": "^1.0.0",
     "react-quill": "^2.0.0",
     "react-router-dom": "^7.5.0",
+    "react-scroll-progress": "^0.1.0",
+    "react-scroll-progress-bar": "^2.0.3",
     "react-select": "^5.10.1",
     "react-tailwindcss-datepicker": "^2.0.0",
     "react-toastify": "^11.0.5",

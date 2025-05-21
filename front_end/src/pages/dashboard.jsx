@@ -7,6 +7,7 @@ import { FaUserEdit } from "react-icons/fa";
 import { BiSolidHome } from "react-icons/bi";
 import { ThreeCircles  } from 'react-loader-spinner'
 import { PieChart, Pie, Cell, Legend, Tooltip } from 'recharts';
+import logo from "/src/assets/modernlogo.png"
 
 const Dashboard = () => {
 
@@ -164,8 +165,8 @@ const Dashboard = () => {
       <div className=" flex justify-evenly">
 
       
-      <div>
-        <p className="text-xl text-center">Summary Data</p>
+      <div className="transition-all duration-300 hover:scale-105 ">
+        <p className="text-2xl text-center ">Summary Data</p>
         <PieChart width={400} height={400}>
           
             <Pie
@@ -185,9 +186,9 @@ const Dashboard = () => {
             <Legend />
           </PieChart>
         </div>
-        <div>
-        <p className="text-xl text-center">Draft Data</p>
-          <PieChart width={400} height={400}>
+        <div className="transition-all duration-300 hover:scale-105 ">
+        <p className="text-2xl text-center">Draft Data</p>
+          <PieChart width={400} height={400} >
             <Pie
               data={draftdatas}
               cx="50%"
@@ -196,6 +197,7 @@ const Dashboard = () => {
               innerRadius={50}
               label
               dataKey="value"
+             
             >
              <Cell fill={COLORS[0]}/>
              <Cell fill={COLORS[1]}/>
@@ -210,6 +212,8 @@ const Dashboard = () => {
       
 
       </div>
+
+      {/* <img src={logo}   alt="Logo" className="h-56 rounded-full w-56 "/> */}
     </div>
   );
 };

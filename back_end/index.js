@@ -4,7 +4,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require('body-parser');
-const port = 6001;
+require('dotenv').config();
+const port = process.env.PORT_NO;
 
 
 app.use(cors());
@@ -27,7 +28,7 @@ const usero = require("./bridge/user");
 const locato = require("./bridge/location");
 const rolo = require("./bridge/role");
 const summario = require("./bridge/summary")
-const kranium = require("./bridge/kranium")
+const kranium = require("./bridge/kranium");
 
 
 app.use('/sv1/ai-summary', drafto);
@@ -38,11 +39,11 @@ app.use('/sv1/ai-summary', summario);
 app.use('/sv1/ai-summary', kranium);
 
 
-/* app.use(express.static(path.join(__dirname, '../front_end/dist')));
+app.use(express.static(path.join(__dirname, '../front_end/dist')));
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../front_end/dist/index.html'))
 })
 
- */
+ 
 
 

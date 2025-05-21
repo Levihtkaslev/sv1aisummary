@@ -193,7 +193,7 @@ const Doctor = () => {
                 <th className="thd">Doctor Name</th>
                 <th className="thd">Modified Time</th>
                 <th className="thd">Generated?</th>
-                <th className="thd">Action</th>
+                <th className="thd">Drafted</th>
     
               </tr>
             </thead>
@@ -210,9 +210,9 @@ const Doctor = () => {
                     <td className="tbd"><UsernameCell userId={item.doctor} /></td>
                     <td className="tbd"> {moment.utc(item.lastmodified).format("DD-MM-YYYY hh:mm:ss A")}</td>
                     <td className={`${item.draftstatus === "Yes"? "text-teal-500" : "text-red-500" } text-center text-base`}>{item.draftstatus}</td>
-                    <th className="tbd">
-                      <button onClick={() => handleEdit(item)}><FaUserEdit className='update' /></button>
-                    </th>
+                    <td className="tbd">{item.count}
+                      {/* <button onClick={() => handleEdit(item)}><FaUserEdit className='update' /></button> */}
+                    </td>
                   </tr>
                 ))
               ) : (

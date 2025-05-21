@@ -14,7 +14,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { FaThumbsUp } from "react-icons/fa6";
 import { FaThumbsDown } from "react-icons/fa6";
 import { BsFillTrash3Fill } from "react-icons/bs";
-import logo from "/src/assets/sparkai2.png"
+import logo from "/src/assets/Prashanth_Hospitals_White_Logo_copy_of_cropped.png"
 
 
 const Layout = ({ children }) => {
@@ -37,10 +37,10 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex h-screen">
-      <div className="w-72 rounded-r-lg shadow-xl  bg-gray-800 text-white p-4 flex flex-col justify-between">
+      <div className="w-72 h-screen rounded-r-lg shadow-xl  bg-gray-800 text-white p-4 flex flex-col justify-between">
         <div>
-        <p className="flex w-full text-2xl justify-start items-center font-bold my-6 mx-2">
-          <img src={logo}   alt="Logo" className="h-10 w-10"/>PFRC<span className="text-gray-800">_</span><span >Summary</span>
+        <p className="flex w-full  font-bold mb-6 bg-gray-500 rounded-xl p-3 transition-all duration-300 hover:scale-105 ">
+          <img src={logo}  alt="Logo" className="h-16 w-80"/>
         </p>
         <nav className="flex flex-col space-y-1">
 
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
                        
                        <div
                           onClick={() => setActiveMenu("/")}
-                          className={`rounded-lg  px-3 flex gap-3 justify-start items-center text-base transition-all duration-200 ${
+                          className={`rounded-lg  px-3 flex gap-3 justify-start items-center text-base transition-all duration-200  ${
                             activeMenu === "/" ? "bg-pink-600 text-white" : "hover:bg-pink-600 text-white"
                           }`}
                         >

@@ -45,7 +45,7 @@ exports.postsummary = async(req, res) => {
                 uhid : uhid,
                 encounter : encounter,
                 summary : summary,
-                 doneby : doneby, 
+                doneby : doneby, 
                 doctor : doctor,
                 createdtime : createdtime,
                 lastmodified : lastmodified
@@ -104,7 +104,8 @@ exports.getsummary = async (req, res) => {
                 status: detail.status,
                 createdtime: detail.createdtime,
                 summary : detail.summary,
-                lastmodified : detail.lastmodified
+                lastmodified : detail.lastmodified,
+                count : detail.count
             });
             });
         });

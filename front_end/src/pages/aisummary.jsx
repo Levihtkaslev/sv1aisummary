@@ -39,6 +39,7 @@ const Summary = () => {
     const editableRef = useRef(null);
     const[load, setload] = useState(true) 
     const backendurl = import.meta.env.VITE_BACKEND_BASURL;
+    const apikey = import.meta.env.VITE_OPENAI_API_KEY;
     const [html, sethtml] = useState("")
     
   
@@ -92,52 +93,50 @@ const Summary = () => {
                
                 (Use <h3> i need it to show in center align this heading only others are as usual left tag. for this heading **do not use #### or backticks with html and  **)}
 
-                {**PATIENT INFORMATION:**  
-                (Use <p><u><b> i need line by line dont use list tag tag; do not use ####)
-                Must Need <br> after this content}
+                {**PATIENT INFORMATION:(<p><u><b>(for heading only)** 
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
+                - Must Need <br> after this content}
 
-                {**DIAGNOSIS:**  
-                (<p><u><b>i need line by line dont use list tag) 
+                {**DIAGNOSIS:(<p><u><b>(for heading only)**  
                 - Diagnosis content only need in bold
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                 - I need it in capital letter and just show what in input for diagnosis don't generate any sentence for diagnosis
                 - Cross-check diagnosis with patient's **gender and age**.  
-                - If a contradiction is found, highlight it with <span style='colo
-                
-                +r:red'>ALERT Message</span> and suggest correction.  
+                - If a contradiction is found, highlight it with <span style='colo+r:red'>ALERT Message</span> and suggest correction.  
                 - Diagnosis starting with "?" means suspected diagnosis. Must Need <br>fter this content}
 
-               {**PROVISIONAL DIAGNOSIS:**  
-                (<p><u><b>  i need line by line dont use list tag)  
+               {**PROVISIONAL DIAGNOSIS:(<p><u><b>(for heading only)**   
                 - Diagnosis content only need in bold
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                 - generate  only if Provisional diagnosis present in the inputother wise dont show anything even heading
                 - I need it in capital letter and just show what in input for diagnosis don't generate any sentence for diagnosis
                 - Cross-check diagnosis with patient's **gender and age**.  
                 - If a contradiction is found, highlight it with <span style='color:red'>ALERT Message</span> and suggest correction.  
                 - Diagnosis starting with "?" means suspected diagnosis. Must Need <br>fter this content}
 
-                {**INDICATIONS:**  
-                (<p><u><b>) 
+                {**INDICATIONS:(<p><u><b>(for heading only)**  
                 -  Must Include **if indication present in the input(under obs department other wise dont show anything even heading) **
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                 - I need it in capital letter and just show what in input for indications don't generate any sentence for indications
                 - If a contradiction is found, highlight it with <span style='color:red'>ALERT Message</span> and suggest correction.}
 
-                {**SURGERY DONE ON "surgery date":**  
+                {**SURGERY DONE ON surgery date:**  
                 - surgery content only need in bold
                   Must Include **only if data contains surgeries array**. Show:
                 - Only surgery name is needed in caps letter others no need here(like surgeon name, assistant surgeon etc....) 
                 - Use <p><u><b> for the heading. Must Need <br>after this content}
 
-                {**PROCEDURE  DONE ON "procedure date":**  
+                {**PROCEDURE  DONE ON procedure date:**  
                 - procedure content only need in bold
                   Must Include **only if data contains procedures array**. Show:
                 - Only procedure name is needed in caps letter others no need here(like surgeon name, assistant surgeon etc....)
                 - Use <p><u><b> for the heading. Must Need <br>after this content}
 
 
-                {**CHIEF COMPLAINTS:**  
-                  (<p><u><b> i need line by line dont use list tag)  
-                  Need elobrated senetence for this
-                  - Start sentence with Complaints of .....
+                {**CHIEF COMPLAINTS:(<p><u><b>(for heading only)**  
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line 
+                -  Must Need elobrated senetence for each for each properties(generate sentence using the value must in 2 lines for each properties)
+                - Each properties value must start sentence with Complaints of .....
                 
                 - Again, cross-check with gender and age.   
                 - Must Need <br> after this content}
@@ -194,49 +193,45 @@ const Summary = () => {
                 
 
 
-                {**HISTORY OF PRESENT ILLNESS:**  
-                (<p><u><b> i need line by line dont use list tag)  
-                - i must need in unorderlist but no list decoration like -, dots,
+                {**HISTORY OF PRESENT ILLNESS:(<p><u><b>(for heading only)**  
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                  - **generate  only if history_of present_illness_present in the input other wise dont show anything even heading**
                 - Again, cross-check with gender and age.   
                 - Must Need <br> after this content}
 
                 
 
-                {**FAMILY HISTORY:**  
-                (<p><u><b> i need line by line dont use list tag)  
-                - i must need in unorderlist but no list decoration like -, dots,
+                {**FAMILY HISTORY:(<p><u><b>(for heading only)**    
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                  - **generate  only if family_history in the input other wise dont show anything even heading**  
                  - make sentence for this with approprite inputs
                 -  Must Need <br> after this content}
 
-                {**LIFE STYLE HISTORY:**  
-                (<p><u><b>  i need line by line dont use list tag)  
-                - i must need in unorderlist but no list decoration like -, dots,
+                {**LIFE STYLE HISTORY:(<p><u><b>(for heading only)**  
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                  - **generate  only if life_style_history in the input other wise dont show anything even heading**  
                  - make sentence for this with approprite inputs
                 -  Must Need <br> after this content}
 
               
 
-                {**PAST MEDICAL HISTORY:**  
-                (<p><u><b> should be line by line but dont use list tag)  
-                - i must need in unorderlist but no list decoration like -, dots,
+                {**PAST MEDICAL HISTORY:(<p><u><b>(for heading only)**    
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                 If not present, write: "No past medical history" after the heading parallely. dont show "Nill". Must Need <br> after this content}
 
-                {**PAST SURGICAL HISTORY:**  
-                (<p><u><b> i need line by line dont use list tag)  
-                - i must need in unorderlist but no list decoration like -, dots,
+                {**PAST SURGICAL HISTORY:(<p><u><b>(for heading only)**  
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
                 If not present, write: "No past surgical history" after the heading parallely. dont show "Nill" Must Need <br> after this content}
 
-                {**DRUG ALLERGY:**  
-                (<p><u><b> i need line by line dont use list tag)  
-                - i must need in unorderlist but no list decoration like -, dots,
+                {**DRUG ALLERGY:(<p><u><b>(for heading only)**  
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties instead use <br> tag for each properties for next line
+                - How want is for example, Not known drug allergy<br>Stevens-Johnson Syndrome<br>....
                 - make sentence for this with approprite inputs
                 If not provided, write: "Not known drug allergy" after the heading parallely. dont show "Nill" Must Need <br> after this content}
 
-                {**CLINICAL EXAMINATION:**  
-                (<p><u><b>  all properties of the object should be line by line but dont use list tag)  
+                {**CLINICAL EXAMINATION:<p><u><b>(heading only)**   
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties
+                - How i want is example, Patient: Conscious, Oriented, Afebrile<br>RR: 26/min<br>SPO2:....<br>.... for all properties
                 - Each property value in the  input should be single line 
                 - property : value(in single like Patient : conscious, oriented, afebrile)
                 - Dont make any sentence show whats in input for the field otherwise dont form any sentence.
@@ -268,13 +263,13 @@ const Summary = () => {
 
                 {**OPERAIVE NOTES:** i need it to show in center align with <p><b> this heading only(OPERATIVE NOTES) others are as usual left tag(LIKE SURGERY DATE, SURGERY ETC).) 
                  MustInclude only if data contains surgeries object other wise dont show this content heading too it contains array of object all object need in following format. Use <p><u><b>  i need line by line for each property dont use list tag and must include in the followingorder:
-                - SURGERY DATE : surgery_date(must include <br>Also property and value should be in bold)
-                - SURGERY : surgery  (must include. Also property and value should be in bold) <br>
-                - SURGEON NAME :  surgeon_name  (must include. Also property and value should be in bold) <br>
-                - ASSISTANT SUREON NAME :  assistant_surgeon_name  (must include. Also property and value should be in bold) <br>
-                - ANAESTHETIST NAME :  anaesthetist_name  (must include. Also property and value should be in bold) <br>
-                - ANAESTHESIA :  anaesthesia  (must include. Also property and value should be in bold) <br>
-                - FINDINGS : findings  (must include. Also property and value should be in bold) <br>
+                - SURGERY DATE : surgery_date(must include <br>Also "property and value" should be in bold <b>tag)
+                - SURGERY : surgery  (must include. Also property and value should be in bold <b>tag) <br>
+                - SURGEON NAME :  surgeon_name  (must include. Also property and value should be in bold <b>tag) <br>
+                - ASSISTANT SUREON NAME :  assistant_surgeon_name  (must include. Also property and value should be in bold <b>tag) <br>
+                - ANAESTHETIST NAME :  anaesthetist_name  (must include. Also property and value should be in bold <b>tag) <br>
+                - ANAESTHESIA :  anaesthesia  (must include. Also property and value should be in bold <b>tag) <br>
+                - FINDINGS : findings  (must include. Also property and value should be in bold <b>tag) <br>
                 - OPERATIVE NOTES :<br>(need a br after this heading) operative_notes (must include.. Also heading should be in bold.just show what in the input field for this dont make any sentence. it should be static) <br>
                 - POST OPERATIVE NOTES : <br>(need a br after this heading)post_operative_notes  (must include. Also heading should be in bold. Make a sentence using the post operative notes. in case anything happening after the surgery mention in the course in the hospital  then take input from  the course in the hospital) 
                   Notes must be detailed (2-3 line para if possible). Pull content from both operative_notes and post_operative_notes. Include relevant protocols (ISO 9001, SOPs, etc.)
@@ -283,38 +278,40 @@ const Summary = () => {
 
                   {**PROCEDURE:**  i need it to show in center align this heading only(PROCEDURES) others are as usual left tag(LIKE PROCEDURE DATE, PROCEDURE ETC).) 
                   MustInclude only if data contains procedures object other wise dont show this content heading too it contains array of object all object need in following format. Use <p><u><b> i need line by line for each property dont use list tag and include in order:
-                  - PROCEDURE DATE : procedure_date(must include <br> Also property and value should be in bold)
-                  - PROCEDURE : surgery  (must include. Also property and value should be in bold) <br>
-                  - SURGEON NAME :  surgeon_name  (must include. Also property and value should be in bold) <br>
-                  - ASSISTANT SUREON NAME :  assistant_surgeon_name  (must include. Also property and value should be in bold) <br>
-                  - ANAESTHETIST NAME :  anaesthetist_name  (must include. Also property and value should be in bold) <br>
-                  - ANAESTHESIA :  anaesthesia  (must include. Also property and value should be in bold) <br>
-                  - FINDINGS :<br>(need a br after this heading) findings  (must include. Also heading should be in bold) <br>
+                  - PROCEDURE DATE : procedure_date(must include <br> Also property and value should be in bold <b>tag)
+                  - PROCEDURE : surgery  (must include. Also property and value should be in bold <b>tag) <br>
+                  - SURGEON NAME :  surgeon_name  (must include. Also property and value should be in bold <b>tag) <br>
+                  - ASSISTANT SUREON NAME :  assistant_surgeon_name  (must include. Also property and value should be in bold <b>tag) <br>
+                  - ANAESTHETIST NAME :  anaesthetist_name  (must include. Also property and value should be in bold <b>tag) <br>
+                  - ANAESTHESIA :  anaesthesia  (must include. Also property and value should be in bold <b>tag) <br>
+                  - FINDINGS :<br>(need a br after this heading) findings  (must include. Also heading should be in bold <b>tag) <br>
                   - OPERATIVE NOTES :<br>(need a br after this heading) operative_notes (must include.. Also heading should be in bold.just show what in the input field for this dont make any sentence. it should be static) <br>
                   - POST OPERATIVE NOTES :<br>(need a br after this heading) post_operative_notes  (must include. Also heading should be in bold. in case anything happening after the surgery mention in the course in the hospital  then take input from  the course in the hospital) 
                     Notes must be detailed (2-3 line para if possible). Pull content from both operative_notes and post_operative_notes. Include relevant protocols (ISO 9001, SOPs, etc.)
                     operative notes and post operative notes are seperate heading dont join it in single para. must be as a seperate headings}
 
 
-                {**TREATMENT GIVEN:** only show if treatment given object is there otherwise dont generate anything even the heading too 
-                (<p><u><b> should be line by line but dont use list tag) 
-                must list all medications
+                {**TREATMENT GIVEN:<p><u><b>(heading only)**only show if treatment given object if is there otherwise dont generate anything even the heading too 
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties
+                How i want is example, Patient: Conscious, Oriented, Afebrile<br>RR: 26/min<br>SPO2:....<br>.... for all properties
+                - must list all medicationsTAB.THYRONORM 80mcg 1 - 0 - 0 ORAL<br>TAB.NODOSIS 1gm 1 - 1 - 1 ORAL<br>......
                 - All i need in caps letter
-                 - I need the g,mg like values in small letter
-                    Format strictly as: MedicineName Dosage(qty should be small letter) frequency(it should be 1 - 0 - 1 format. dont generate BD, like that ) route.
+                - I need the g,mg like values in small letter
+                -Format strictly as: MedicineName Dosage(qty should be small letter) frequency(it should be 1 - 0 - 1 format. dont generate BD, like that ) route.
                 - Verify and highlight abnormal dosages by wrapping them in <span style='color:red'>ALERT</span> 
                 - Also if a medicine contain like 1tab something show 1tab dont show only tab. even 1 is also importat. 
                 - Consider patient age, gender, diagnosis, and guidelines.Must Need <br> after this content}
 
 
-                {**CONDITION AT DISCHARGE:**  
-                (<p><u><b> all properties of the object should be line by line but dont use list tag)  
+                {**CONDITION AT DISCHARGE:<p><u><b>(heading only)**
+                - all properties of the object should be line by line but dont use list tag or any header or p tag for the properties
                 - Each property value in the  input should be single line 
                 - property : value(in single like)
+                - How i want is example, Patient: Conscious, Oriented, Afebrile<br>RR: 26/min<br>SPO2:....<br>.... for all properties
                 - if a property has value then must show the input dont avoid propeties with values
                 - Dont make any sentence show whats in input for the field otherwise dont form any sentence.
                 - And i need /min as suffix in PR and RR
-                - Must Need <br> after this content}
+                - Must Need <br> after this content
 
 
                 
@@ -371,7 +368,7 @@ const Summary = () => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "Authorization" : "Bearer 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",
+                "Authorization" : `Bearer ${apikey}`,
               },
               body: JSON.stringify(requestData),
             }

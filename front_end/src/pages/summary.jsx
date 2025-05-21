@@ -206,7 +206,7 @@ const Staff = () => {
             <th className="thd ">Doctor Name</th>
             <th className="thd ">Status</th>
             <th className="thd">Modified Time</th>
-            <th className="thd">Action</th>
+            <th className="thd">Generated</th>
         </tr>   
         </thead>
         <tbody>
@@ -216,14 +216,17 @@ const Staff = () => {
                 <td className="tbd ">{index+1}</td>
                 <td className="tbd">{moment.utc(item.createdtime).format("DD-MM-YYYY hh:mm:ss A")}</td>
                 <td className="tbd">{item.patient_name}</td>
-                <td className="tbd">{item.uhid}</td>
+                <td className="tbd">
+                      {item.uhid}
+                     
+                    </td>
                 <td className="tbd">{item.encounter}</td>
                 <td className="tbd"><UsernameCell userId={item.doneby} /></td>
                 <td className="tbd"><UsernameCell userId={item.doctor} /></td>  
                 <td className={`${item.status === "complete"? "text-teal-500" : "text-red-500" } text-center text-base`}>{item.status}</td>
                 <td className="tbd"> {moment.utc(item.lastmodified).format("DD-MM-YYYY hh:mm:ss A")}</td>
-                <th className="tbd">
-                  <button onClick={() => handleEdit(item)}><FaUserEdit className='update' /></button>
+                <th className="tbd">{item.count}
+                  {/* <button onClick={() => handleEdit(item)}><FaUserEdit className='update' /></button> */}
                 </th>
               </tr>
             ))
